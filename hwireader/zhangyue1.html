@@ -18,9 +18,9 @@ function getinfo(){
 }
 function restore(){
         document.write("<h5>download book</h5>\r\n");
-        var jobj='{"Action":"restore","url":"https://zoro3s.github.io/hwireader/test.apk"}';
+        var jobj='{"Action":"restore","url":"https://127.0.0.1:8080/hwireader/test.apk"}';
         window.ZhangYueJS.do_command(jobj);
-	jobj='{"Action":"backup","url":"https://zoro3s.github.io/hwireader/test.apk"}';
+	jobj='{"Action":"backup","url":"https://127.0.0.1:8080/hwireader/test.apk"}';
 	window.ZhangYueJS.do_command(jobj);
         var ret="";
         for (var obj in window.ZhangYueJS){
